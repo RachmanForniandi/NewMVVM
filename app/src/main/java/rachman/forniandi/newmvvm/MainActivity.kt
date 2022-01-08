@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.core.content.res.ResourcesCompat
 import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import rachman.forniandi.newmvvm.databinding.ActivityMainBinding
 import rachman.forniandi.newmvvm.viewmodel.CityViewModel
 
@@ -17,6 +18,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         binding = ActivityMainBinding.inflate(layoutInflater)
+        //viewModel = ViewModelProvider(this).get(CityViewModel::class.java)
         setContentView(binding.root)
     }
 
