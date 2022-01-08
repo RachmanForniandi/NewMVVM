@@ -3,6 +3,7 @@ package rachman.forniandi.newmvvm.viewmodel
 import android.os.Handler
 import android.os.Looper
 import android.os.Looper.loop
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import rachman.forniandi.newmvvm.model.City
@@ -17,6 +18,8 @@ class CityViewModel:ViewModel() {
     init {
         loop()
     }
+
+    fun getCityData(): LiveData<City> = cityData
     private fun loop(){
         Handler(Looper.getMainLooper()).postDelayed({
             updateCity()
